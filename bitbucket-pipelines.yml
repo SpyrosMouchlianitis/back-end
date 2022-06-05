@@ -12,6 +12,8 @@ pipelines:
               - docker login -u $DOCKER_HUB_USER -p $DOCKER_HUB_PASSWORD
               - docker build --pull --rm -f "Dockerfile" -t spyrosmoux/devops-backend:latest "."
               - docker push spyrosmoux/devops-backend:latest
+            services:
+              - docker
         - step:
             name: 'Security scan'
             script:
