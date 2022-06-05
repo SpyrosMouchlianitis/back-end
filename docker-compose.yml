@@ -1,0 +1,8 @@
+version: "1.0"
+
+services:
+  back-end:
+    build: .
+    image: devops-backend:latest
+    ports:
+      - ${BACKEND_PORT}:8081
